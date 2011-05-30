@@ -1,1 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6">
+	<name>Artof Google Mini</name>
+	<packagename>artofgooglemini</packagename>
+	<version>1.0.1</version>
+	<url>http://www.theartofjoomla.com/extensions/artof-google-mini.html</url>
+	<packager>Andrew Eddie</packager>
+	<packagerurl>http://www.theartofjoomla.com/extensions/artof-google-mini.html</packagerurl>
+	<description>Artof Google Mini package.</description>
+	<update>http://update.joomla.org/update/packages/everything</update>
+	<files>
+		<file type="component" 	id="com_artofgm" >com_artofgm.master.tar.gz</file>
+		<file type="module" 	id="mod_alpha" 	client="site">mod_artofgm_search.master.tar.gz</file>
+	</files>
+</extension>

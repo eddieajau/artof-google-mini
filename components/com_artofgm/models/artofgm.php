@@ -9,7 +9,7 @@
 // No direct access
 defined('_JEXEC') or die;
 
-juimport('joomla.application.component.model16');
+jimport('joomla.application.component.model');
 
 /**
  * ArtofGM model.
@@ -20,7 +20,7 @@ juimport('joomla.application.component.model16');
  * @subpackage	com_artofgm
  * @since		1.0
  */
-class ArtofGMModelArtofGM extends JModel16
+class ArtofGMModelArtofGM extends JModel
 {
 	/**
 	 * Internal memory based cache array of data.

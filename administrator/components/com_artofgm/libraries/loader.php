@@ -33,18 +33,3 @@ function juimport($path)
 
 	return $res;
 }
-
-if (!function_exists('jximport')) {
-	/**
-	 * Proxy for juimport function.
-	 *
-	 * @param	string	$path	The library path.
-	 *
-	 * @return
-	 * @since	1.0
-	 */
-	function jximport($path)
-	{
-		return juimport($path);
-	}
-}

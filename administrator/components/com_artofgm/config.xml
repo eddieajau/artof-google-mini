@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<config menu="hide">
-	<params addpath="/administrator/components/com_artofgm/helpers/elements">
-		<param
+<config>
+	<fieldset
+		name="default"
+		label="COM_ARTOFGM_OPTIONS_FIELDSET_LABEL"
+		addfieldpath="/administrator/components/com_artofgm/models/fields">
+
+		<field
 			name="server"
 			type="text"
 			size="50"
 			label="COM_ARTOFGM_PARAM_SERVER_LABEL"
 			description="COM_ARTOFGM_PARAM_SERVER_DESC" />
 
-		<param
+		<field
 			name="dl_method"
 			type="radio"
 			default="fopen"
@@ -21,9 +25,9 @@
 			<option
 				value="curl"
 			>COM_ARTOFGM_PARAM_DL_METHOD_CURL</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			name="site"
 			type="text"
 			size="50"
@@ -31,7 +35,7 @@
 			label="COM_ARTOFGM_PARAM_SITE_LABEL"
 			description="COM_ARTOFGM_PARAM_SITE_DESC" />
 			
-		<param
+		<field
 			name="client"
 			type="text"
 			size="50"
@@ -39,13 +43,13 @@
 			label="COM_ARTOFGM_PARAM_CLIENT_LABEL"
 			description="COM_ARTOFGM_PARAM_CLIENT_DESC" />
 
-		<param
-			type="help"
+		<field
+			type="note"
 			style="heading"
 			default="COM_ARTOFGM_PARAMS_PAGE_OPTIONS"
 			/>
 
-		<param
+		<field
 			type="radio"
 			name="use_stylesheet"
 			label="COM_ARTOFGM_PARAM_USE_STYLESHEET_LABEL"
@@ -53,15 +57,15 @@
 			default="1">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
-			type="help"
+		<field
+			type="note"
 			style="heading"
 			default="COM_ARTOFGM_PARAMS_BASIC_FORM_OPTIONS"
 			/>
 
-			<param
+			<field
 				type="radio"
 				name="show_advanced_search"
 				label="COM_ARTOFGM_PARAM_SHOW_ADVANCED_SEARCH_LABEL"
@@ -69,9 +73,9 @@
 				default="1">
 				<option value="1">YES</option>
 				<option value="0">NO</option>
-			</param>
+			</field>
 
-			<param
+			<field
 				type="radio"
 				name="show_limit"
 				label="COM_ARTOFGM_PARAM_SHOW_LIMIT_LABEL"
@@ -79,15 +83,15 @@
 				default="1">
 				<option value="1">YES</option>
 				<option value="0">NO</option>
-			</param>
+			</field>
 
-		<param
-			type="help"
+		<field
+			type="note"
 			style="heading"
 			default="COM_ARTOFGM_PARAMS_ADVANCED_FORM_OPTIONS"
 			/>
 
-		<param
+		<field
 			type="radio"
 			name="show_language"
 			label="COM_ARTOFGM_PARAM_SHOW_LANGUAGE_LABEL"
@@ -95,9 +99,9 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="radio"
 			name="show_filetypes"
 			label="COM_ARTOFGM_PARAM_SHOW_FILETYPES_LABEL"
@@ -105,9 +109,9 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="radio"
 			name="show_occurences"
 			label="COM_ARTOFGM_PARAM_SHOW_OCCURENCES_LABEL"
@@ -115,9 +119,9 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="radio"
 			name="show_domain"
 			label="COM_ARTOFGM_PARAM_SHOW_DOMAIN_LABEL"
@@ -125,9 +129,9 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="radio"
 			name="show_links"
 			label="COM_ARTOFGM_PARAM_SHOW_LINKS_LABEL"
@@ -135,9 +139,9 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="radio"
 			name="show_sort"
 			label="COM_ARTOFGM_PARAM_SHOW_SORT_LABEL"
@@ -145,15 +149,15 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
-			type="help"
+		<field
+			type="note"
 			style="heading"
 			default="COM_ARTOFGM_PARAMS_RESULTS_OPTIONS"
 			/>
 
-		<param
+		<field
 			type="radio"
 			name="show_snippet"
 			label="COM_ARTOFGM_PARAM_SHOW_SNIPPET_LABEL"
@@ -161,9 +165,9 @@
 			default="1">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="text"
 			name="truncate_url"
 			label="COM_ARTOFGM_PARAM_TRUNCATE_URL_LABEL"
@@ -171,14 +175,14 @@
 			size="6"
 			default="75" />
 
-		<param
+		<field
 			type="text"
 			name="truncate_suffix"
 			label="COM_ARTOFGM_PARAM_TRUNCATE_SUFFIX_LABEL"
 			description="COM_ARTOFGM_PARAM_TRUNCATE_SUFFIX_DESC"
 			size="6" />
 
-		<param
+		<field
 			type="radio"
 			name="show_cached_size"
 			label="COM_ARTOFGM_PARAM_SHOW_CACHED_SIZE_LABEL"
@@ -186,9 +190,9 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			type="radio"
 			name="show_crawl_date"
 			label="COM_ARTOFGM_PARAM_SHOW_CRAWL_DATE_LABEL"
@@ -196,14 +200,14 @@
 			default="0">
 			<option value="1">YES</option>
 			<option value="0">NO</option>
-		</param>
+		</field>
 
-		<param
-			type="help"
+		<field
+			type="note"
 			style="heading"
 			default="COM_ARTOFGM_PARAM_PROXY_LEGEND" />
 
-		<param
+		<field
 			name="dl_proxy"
 			type="radio"
 			default="0"
@@ -216,32 +220,32 @@
 			<option
 				value="1"
 			>Yes</option>
-		</param>
+		</field>
 
-		<param
+		<field
 			name="dl_proxy_host"
 			type="text"
 			size="50"
 			label="COM_ARTOFGM_PARAM_DL_PROXY_HOST_LABEL"
 			description="COM_ARTOFGM_PARAM_DL_PROXY_HOST_DESC" />
 
-		<param
+		<field
 			name="dl_proxy_port"
 			type="text"
 			label="COM_ARTOFGM_PARAM_DL_PROXY_PORT_LABEL"
 			description="COM_ARTOFGM_PARAM_DL_PROXY_PORT_DESC" />
 
-		<param
+		<field
 			name="dl_proxy_user"
 			type="text"
 			label="COM_ARTOFGM_PARAM_DL_PROXY_USER_LABEL"
 			description="COM_ARTOFGM_PARAM_DL_PROXY_USER_DESC" />
 
-		<param
+		<field
 			name="dl_proxy_pass"
 			type="password"
 			label="COM_ARTOFGM_PARAM_DL_PROXY_PASS_LABEL"
 			description="COM_ARTOFGM_PARAM_DL_PROXY_PASS_DESC" />
 
-	</params>
+	</fieldset>
 </config>

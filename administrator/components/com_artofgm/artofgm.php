@@ -17,7 +17,7 @@ $lang->load('com_artofgm', JPATH_COMPONENT);
 require_once JPATH_COMPONENT.'/version.php';
 require_once JPATH_COMPONENT.'/libraries/loader.php';
 
-juimport('joomla.application.component.controller');
+jimport('joomla.application.component.controller');
 
 $controller = JController::getInstance('ArtofGM');
 $controller->execute(JRequest::getVar('task'));
