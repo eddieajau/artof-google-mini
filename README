@@ -1,0 +1,5 @@
+Artof Google Mini is a component to allow seamless integration with a Google Mini appliance
+and your Joomla 1.5+ web site without needing to resort to unimpressive iframe wrappers.
+
+Artof Google Mini polls your appliance directly and displays the results within the Joomla page
+so you can maintain a consistent user experience for both your content and search.
