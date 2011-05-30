@@ -10,7 +10,7 @@
 	<license>GNU General Public License &lt;http://www.fsf.org/licensing/licenses/gpl.html&gt;</license>
 	<description>COM_ARTOFGM_DESC</description>
 
-<!-- 	<installfile>install/install.php</installfile> -->
+ 	<scriptfile>installer.php</scriptfile>
 
 	<files folder="site">
 		<folder>helpers</folder>
@@ -29,7 +29,6 @@
 
 		<files folder="admin">
 			<folder>helpers</folder>
-			<folder>install</folder>
 			<folder>language</folder>
 			<folder>libraries</folder>
 			<folder>media</folder>

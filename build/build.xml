@@ -170,6 +170,17 @@
 		</if>
 
 		<if>
+			<available file="${targetdir}/package/${extname}/${extsub}/installer.php" type="file" />
+			<then>
+				<copy
+					file="${targetdir}/package/${extname}/${extsub}/installer.php"
+					tofile="${targetdir}/package/${extname}/installer.php" overwrite="true" />
+				<delete
+					file="${targetdir}/package/${extname}/${extsub}/installer.php" />
+			</then>
+		</if>
+
+		<if>
 			<equals arg1="${build}" arg2="1" />
 			<then>
 				<delete file="${targetdir}/package/${extname}.${package.version}.tar.gz" />
