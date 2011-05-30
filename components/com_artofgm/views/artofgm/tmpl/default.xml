@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_DEFAULT_TITLE</name>
+		<description>COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_DEFAULT_DESC</description>
+
+		<params addpath="/administrator/components/com_artofgm/helpers/elements">
+			<param
+				type="help"
+				style="heading"
+				default="COM_ARTOFGM_PARAMS_PAGE_OPTIONS"
+				/>
+
+			<param
+				type="radio"
+				name="use_stylesheet"
+				label="COM_ARTOFGM_PARAM_USE_STYLESHEET_LABEL"
+				description="COM_ARTOFGM_PARAM_USE_STYLESHEET_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+
+			<param
+				type="help"
+				style="heading"
+				default="COM_ARTOFGM_PARAMS_BASIC_FORM_OPTIONS"
+				/>
+
+			<param
+				type="radio"
+				name="show_advanced_search"
+				label="COM_ARTOFGM_PARAM_SHOW_ADVANCED_SEARCH_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_ADVANCED_SEARCH_LABEL"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+
+			<param
+				type="radio"
+				name="show_limit"
+				label="COM_ARTOFGM_PARAM_SHOW_LIMIT_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_LIMIT_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+
+			<param
+				type="help"
+				style="heading"
+				default="COM_ARTOFGM_PARAMS_RESULTS_OPTIONS"
+				/>
+
+			<param
+				type="radio"
+				name="show_snippet"
+				label="COM_ARTOFGM_PARAM_SHOW_SNIPPET_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_SNIPPET_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+
+			<param
+				type="text"
+				name="truncate_url"
+				label="COM_ARTOFGM_PARAM_TRUNCATE_URL_LABEL"
+				description="COM_ARTOFGM_PARAM_TRUNCATE_URL_DESC"
+				size="6"
+				default="" />
+
+			<param
+				type="text"
+				name="truncate_suffix"
+				label="COM_ARTOFGM_PARAM_TRUNCATE_SUFFIX_LABEL"
+				description="COM_ARTOFGM_PARAM_TRUNCATE_SUFFIX_DESC"
+				size="" />
+
+			<param
+				type="radio"
+				name="show_cached_size"
+				label="COM_ARTOFGM_PARAM_SHOW_CACHED_SIZE_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_CACHED_SIZE_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+
+			<param
+				type="radio"
+				name="show_crawl_date"
+				label="COM_ARTOFGM_PARAM_SHOW_CRAWL_DATE_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_CRAWL_DATE_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+		</params>
+	</state>
+</metadata>

@@ -1,0 +1,26 @@
+<!-- Example page 2 of a search -->
+<!DOCTYPE GSP SYSTEM "google.dtd">
+<GSP VER="3.2">
+	<TM>0.236258</TM>
+	<Q>toowoomba</Q>
+	<PARAM name="num" value="20" original_value="20"/>
+	<PARAM name="access" value="p" original_value="p"/>
+	<PARAM name="entqr" value="0" original_value="0"/>
+	<PARAM name="start" value="10" original_value="10"/>
+	<PARAM name="output" value="xml" original_value="xml"/>
+	<PARAM name="sort" value="date:D:L:d1" original_value="date%3AD%3AL%3Ad1"/>
+	<PARAM name="site" value="default_collection" original_value="default_collection"/>
+	<PARAM name="ie" value="UTF-8" original_value="UTF-8"/>
+	<PARAM name="client" value="default_frontend" original_value="default_frontend"/>
+	<PARAM name="q" value="toowoomba" original_value="toowoomba"/>
+	<PARAM name="ip" value="192.168.50.251" original_value="192.168.50.251"/>
+	<RES SN="11" EN="15">
+		<M>34400</M>
+		<FI/>
+		<R N="11"><U>http://www.toowoombarc.qld.gov.au/</U><UE>http://www.toowoombarc.qld.gov.au/</UE><T>local people, local service</T><RK>0</RK><CRAWLDATE>8 Nov 2010</CRAWLDATE><FS NAME="date" VALUE="2010-11-08"/><S>&lt;b&gt;Toowoomba&lt;/b&gt; Regional Council - amalgamated council superceding Crows Nest, Rosalie,&lt;br&gt; Jondaryan, Millmerran, Pittsworth, Clifton and Cambooya Shires darling downs &lt;b&gt;...&lt;/b&gt;  </S><LANG>en</LANG><HAS><L/><C SZ="29k" CID="kVQmPnyDcBsJ" ENC="UTF-8"/></HAS></R>
+		<R N="12"><U>http://www.toowoombarc.qld.gov.au/annualreport/</U><UE>http://www.toowoombarc.qld.gov.au/annualreport/</UE><T>2009/10 ANNUAL REPORT</T><RK>0</RK><CRAWLDATE>8 Nov 2010</CRAWLDATE><FS NAME="date" VALUE="2010-11-08"/><S>&lt;b&gt;Toowoomba&lt;/b&gt; Regional Council’s 2009/10 Annual Report Card. The Report Card&lt;br&gt; provides important &lt;b&gt;...&lt;/b&gt; &lt;b&gt;Toowoomba&lt;/b&gt; Regional Council Annual Report. &lt;b&gt;...&lt;/b&gt;  </S><LANG>en</LANG><HAS><L/><C SZ="15k" CID="pyL3AQrK9sMJ" ENC="UTF-8"/></HAS></R>
+		<R N="13"><U>http://www.empiretheatre.com.au/</U><UE>http://www.empiretheatre.com.au/</UE><T>Empire Theatre - Home</T><RK>0</RK><CRAWLDATE>8 Nov 2010</CRAWLDATE><FS NAME="date" VALUE="2010-11-09"/><S>&lt;b&gt;...&lt;/b&gt; Now Open. Privacy | Copyright © Empire Theatres Pty. Ltd. 2006 | Disclaimer&lt;br&gt; 56 Neil Street, &lt;b&gt;Toowoomba&lt;/b&gt;, Queensland 4350, Australia. </S><LANG>en</LANG><HAS><L/><C SZ="24k" CID="IcWduhZWBx0J" ENC="ISO-8859-1"/></HAS></R>
+		<R N="14" MIME="application/octet-stream"><U>http://www.empiretheatre.com.au/index2.php?option=com_contact&amp;task=vcard&amp;contact_id=2&amp;no_html=1</U><UE>http://www.empiretheatre.com.au/index2.php%3Foption%3Dcom_contact%26task%3Dvcard%26contact_id%3D2%26no_html%3D1</UE><T>Empire Theatres Pty. Ltd.</T><RK>0</RK><CRAWLDATE>8 Nov 2010</CRAWLDATE><FS NAME="date" VALUE="2010-11-09"/><S>&lt;b&gt;...&lt;/b&gt; Empire Theatre. 54 - 56 Neil Street PO Box 1227, &lt;b&gt;Toowoomba&lt;/b&gt; 4350 Queensland Australia.&lt;br&gt; +61 7 4698 9900 ( Work Preferred Voice ) +61 7 4698 9998 ( Work Fax ). &lt;b&gt;...&lt;/b&gt;  </S><LANG>en</LANG><HAS><L/><C SZ="" CID="grNc4tEVZLAJ" ENC="ISO-8859-1"/></HAS></R>
+		<R N="15"><U>http://epwweb.toowoombarc.qld.gov.au/ePathway/Production/Web/Other/Contact.aspx</U><UE>http://epwweb.toowoombarc.qld.gov.au/ePathway/Production/Web/Other/Contact.aspx</UE><T>Sign in</T><RK>0</RK><CRAWLDATE>7 Nov 2010</CRAWLDATE><FS NAME="date" VALUE=""/><S>&lt;b&gt;...&lt;/b&gt; send them an email. Contact Name, Department, Phone No, Fax No, Mobile No.&lt;br&gt; &lt;b&gt;Toowoomba&lt;/b&gt; RC Helpdesk, Online Services access, 07.4688.6659, </S><LANG>en</LANG><HAS><L/><C SZ="12k" CID="cqcHe6EyKrgJ" ENC="ISO-8859-1"/></HAS></R>
+	</RES>
+</GSP>

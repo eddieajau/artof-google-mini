@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_ADVANCED_TITLE">
+		<message>
+			<![CDATA[COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_ADVANCED_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_ADVANCED_TITLE</name>
+		<description>COM_ARTOFGM_VIEW_ARTOFGM_LAYOUT_ADVANCED_DESC</description>
+
+		<params>
+			<param
+				type="help"
+				style="heading"
+				default="COM_ARTOFGM_HELP_PAGE_OPTIONS"
+				/>
+
+			<param
+				type="radio"
+				name="use_stylesheet"
+				label="COM_ARTOFGM_PARAM_USE_STYLESHEET_LABEL"
+				description="COM_ARTOFGM_PARAM_USE_STYLESHEET_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+
+			<param
+				type="help"
+				style="heading"
+				default="COM_ARTOFGM_PARAMS_ADVANCED_FORM_OPTIONS"
+				/>
+	
+			<param
+				type="radio"
+				name="show_language"
+				label="COM_ARTOFGM_PARAM_SHOW_LANGUAGE_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_LANGUAGE_DESC"
+				default="0">
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+	
+			<param
+				type="radio"
+				name="show_filetypes"
+				label="COM_ARTOFGM_PARAM_SHOW_FILETYPES_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_FILETYPES_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+	
+			<param
+				type="radio"
+				name="show_occurences"
+				label="COM_ARTOFGM_PARAM_SHOW_OCCURENCES_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_OCCURENCES_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+	
+			<param
+				type="radio"
+				name="show_domain"
+				label="COM_ARTOFGM_PARAM_SHOW_DOMAIN_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_DOMAIN_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+	
+			<param
+				type="radio"
+				name="show_links"
+				label="COM_ARTOFGM_PARAM_SHOW_LINKS_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_LINKS_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+	
+			<param
+				type="radio"
+				name="show_sort"
+				label="COM_ARTOFGM_PARAM_SHOW_SORT_LABEL"
+				description="COM_ARTOFGM_PARAM_SHOW_SORT_DESC"
+				default="">
+				<option value="">JUSE_GLOBAL</option>
+				<option value="1">YES</option>
+				<option value="0">NO</option>
+			</param>
+		</params>
+	</state>
+</metadata>

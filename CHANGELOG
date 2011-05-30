@@ -1,0 +1,49 @@
+0. Metadata
+-----------
+File version:	$Id: CHANGELOG 272 2010-09-09 08:36:19Z eddieajau $
+Copyright:		Copyright (C) 2005 - 2010 New Life in It Pty Ltd. All rights reserved.
+License:		GNU General Public License version 2 or later.
+
+1. Copyright and disclaimer
+---------------------------
+This application is opensource software released under the GPL.  Please
+see source code and the LICENSE file
+
+
+2. Changelog
+------------
+This is a non-exhaustive (but still near complete) changelog for
+Joomla! 1.6, including alpha and beta versions.
+Our thanks to all those people who've contributed bug reports and
+code fixes.
+
+Legend:
+
+* -> Security Fix
+# -> Issue Fix
+$ -> Language fix or change
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note
+
+30-May-2011
+ ! Moved to github: https://github.com/eddieajau/artof-google-mini
+ ^ Rebuild "build" file for 1.6 compatibility
+
+15-Apr-2011
+ # Added support for KeyMatch results.
+ # Allowed the site and client URL arguments to be overridden.
+
+16-Mar-2011
+ ! Move repo to BitBucket
+ # Fix incorrect escaping of some results.
+ # Add styling to frontend list pagination to fix problems caused by RocketTheme templates.
+ # Fix misclosed Advanced Search anchor tag.
+
+07-Jan-2011
+ # Fixed routing issues because of bad option.
+ # Removed spurious debugging code.
+ ! Update copyright year.
+
+---------- Release version 1.0.0 ----------

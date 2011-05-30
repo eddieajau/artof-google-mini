@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.20" method="upgrade">
+	<name>MOD_ARTOFGM_SEARCH</name>
+	<author>Andrew Eddie</author>
+	<creationDate>2011-01-07</creationDate>
+	<copyright>Copyright 2005 - 2011 New Life in IT Pty Ltd. All rights reserved.	</copyright>
+	<license>GNU General Public License version 2 or later.</license>
+	<authorEmail>support@theartofjoomla.com</authorEmail>
+	<authorUrl>www.theartofjoomla.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_ARTOFGM_SEARCH_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename module="mod_artofgm_search">mod_artofgm_search.php</filename>
+	</files>
+
+	<params>
+		<param
+			name="label_pos"
+			type="list"
+			default="top"
+			label="MOD_ARTOFGM_SEARCH_LABEL_POS_LABEL"
+			description="MOD_ARTOFGM_SEARCH_LABEL_POS_DESC">
+			<option value="none">MOD_ARTOFGM_SEARCH_OPTION_NONE</option>
+			<option value="right">MOD_ARTOFGM_SEARCH_OPTION_RIGHT</option>
+			<option value="left">MOD_ARTOFGM_SEARCH_OPTION_LEFT</option>
+			<option value="top">MOD_ARTOFGM_SEARCH_OPTION_TOP</option>
+			<option value="bottom">MOD_ARTOFGM_SEARCH_OPTION_BOTTOM</option>
+		</param>
+		
+		<param
+			name="label_text"
+			type="text"
+			label="MOD_ARTOFGM_SEARCH_LABEL_TEXT_LABEL"
+			description="MOD_ARTOFGM_SEARCH_LABEL_TEXT_DESC" />
+		
+		<param
+			name="input_size"
+			type="text"
+			label="MOD_ARTOFGM_SEARCH_INPUT_SIZE_LABEL"
+			description="MOD_ARTOFGM_SEARCH_INPUT_SIZE_DESC"
+			size="6"
+			default="20" />
+		
+		<param
+			name="button_pos"
+			type="list"
+			default="right"
+			label="MOD_ARTOFGM_SEARCH_BUTTON_POS_LABEL"
+			description="MOD_ARTOFGM_SEARCH_BUTTON_POS_DESC">
+			<option value="none">MOD_ARTOFGM_SEARCH_OPTION_NONE</option>
+			<option value="right">MOD_ARTOFGM_SEARCH_OPTION_RIGHT</option>
+			<option value="left">MOD_ARTOFGM_SEARCH_OPTION_LEFT</option>
+			<option value="top">MOD_ARTOFGM_SEARCH_OPTION_TOP</option>
+			<option value="bottom">MOD_ARTOFGM_SEARCH_OPTION_BOTTOM</option>
+		</param>
+
+		<param
+			name="button_text"
+			type="text"
+			label="MOD_ARTOFGM_SEARCH_BUTTON_TEXT_LABEL"
+			description="MOD_ARTOFGM_SEARCH_BUTTON_TEXT_DESC" />
+
+		<param
+			name="auto_hide"
+			type="radio"
+			label="MOD_ARTOFGM_SEARCH_AUTO_HIDE_LABEL"
+			description="MOD_ARTOFGM_SEARCH_AUTO_HIDE_DESC"
+			default="0">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	
+	<params group="advanced">
+		<param
+			name="moduleclass_sfx"
+			type="text"
+			default=""
+			label="Module Class Suffix" 
+			description="PARAMMODULECLASSSUFFIX" />
+			
+		<param 
+			name="cache" 
+			type="list" 
+			default="0" 
+			label="Caching" 
+			description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		
+		<param 
+			name="cache_time" 
+			type="text" 
+			default="900" 
+			label="Cache Time" 
+			description="The time before the module is recached" />
+	</params>
+
+</install>

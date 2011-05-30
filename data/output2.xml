@@ -1,0 +1,41 @@
+<!-- Page with a spelling suggestion -->
+<!DOCTYPE GSP SYSTEM "google.dtd">
+<GSP VER="3.2">
+<TM>0.021268</TM><Q>toowomba</Q>
+<PARAM name="num" value="20" original_value="20"/>
+<PARAM name="access" value="p" original_value="p"/>
+<PARAM name="entqr" value="0" original_value="0"/>
+<PARAM name="start" value="0" original_value="0"/>
+<PARAM name="output" value="xml" original_value="xml"/>
+<PARAM name="sort" value="date:D:L:d1" original_value="date%3AD%3AL%3Ad1"/>
+<PARAM name="site" value="default_collection" original_value="default_collection"/>
+<PARAM name="ie" value="UTF-8" original_value="UTF-8"/>
+<PARAM name="client" value="default_frontend" original_value="default_frontend"/>
+<PARAM name="q" value="toowomba" original_value="toowomba"/>
+<PARAM name="ip" value="192.168.50.251" original_value="192.168.50.251"/>
+<Spelling>
+	<Suggestion q="toowoomba">&lt;b&gt;&lt;i&gt;toowoomba&lt;/i&gt;&lt;/b&gt;</Suggestion>
+</Spelling>
+<RES SN="1" EN="2">
+	<M>38</M>
+	<FI/>
+	<R N="1">
+		<U>http://www.toowoombarc.qld.gov.au/index.php?option=com_content&amp;view=article&amp;id=152&amp;Itemid=117</U><UE>http://www.toowoombarc.qld.gov.au/index.php%3Foption%3Dcom_content%26view%3Darticle%26id%3D152%26Itemid%3D117</UE><T>Robinson, Thomas George</T><RK>0</RK><CRAWLDATE>8 Nov 2010</CRAWLDATE><FS NAME="date" VALUE="2010-11-08"/><S>&lt;b&gt;...&lt;/b&gt; &lt;b&gt;Toowomba&lt;/b&gt;’s third Mayor was a stock and land salesman by occupation. Thomas&lt;br&gt; George Robinson, elected in 1865, was the first Australian &lt;b&gt;...&lt;/b&gt;  </S><LANG>en</LANG><HAS><L/><C SZ="24k" CID="IRlEz_847BQJ" ENC="UTF-8"/></HAS>
+	</R>
+	<R N="2" L="2" MIME="application/pdf">
+		<U>http://www.toowoombarc.qld.gov.au/index.php?option=com_docman&amp;task=doc_download&amp;gid=1999&amp;Itemid=133</U>
+		<UE>http://www.toowoombarc.qld.gov.au/index.php%3Foption%3Dcom_docman%26task%3Ddoc_download%26gid%3D1999%26Itemid%3D133</UE>
+		<T>Toowoomba Bypass petition campaign</T>
+		<RK>0</RK>
+		<CRAWLDATE>8 Nov 2010</CRAWLDATE>
+		<FS NAME="date" VALUE=""/>
+		<S>&lt;b&gt;...&lt;/b&gt; If the &lt;b&gt;Toowomba&lt;/b&gt; Bypass is not built now, it is expected that the number of accidents,&lt;br&gt; deaths and injuries occuring on the range will increase. &lt;b&gt;...&lt;/b&gt;  </S>
+		<LANG>en</LANG>
+		<HAS>
+			<L/>
+			<C SZ="" CID="eLHfOFhn5PAJ" ENC="UTF-8"/>
+		</HAS>
+		<HN U="www.toowoombarc.qld.gov.au/index.php">www.toowoombarc.qld.gov.au/index.php</HN>
+	</R>
+</RES>
+</GSP>

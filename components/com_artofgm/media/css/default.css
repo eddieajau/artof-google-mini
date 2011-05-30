@@ -1,0 +1,54 @@
+
+div.google {
+	margin: 5px;
+	border: 1px solid #aaa;
+	padding: 10px;
+	background-color: #fff;
+}
+
+div.google .form {
+	margin: 0 0 10px 0;
+}
+
+div.google .g,
+div.google .gm {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.google .gm {
+	background-color: #eee;
+	padding: 4px;
+}
+
+div.google .gm p.s {
+	margin: 0;
+}
+
+div.google .l {
+	font-size: 140%;
+}
+
+div.google .s {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+div.google .s span.url {
+	color: #080;
+}
+
+div.google .suggest {
+	font-size: 140%;
+	color: #c00;
+}
+
+div.google .suggest a {
+	font-style: italic;
+}
+
+/* Advanced search */
+
+div.google table tbody th {
+	text-align: left;
+}

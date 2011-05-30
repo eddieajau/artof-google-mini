@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.15" method="upgrade">
+	<name>ArtofGM</name>
+	<version>1.0.1</version>
+	<creationDate>2011-01-07</creationDate>
+	<author>Andrew Eddie</author>
+	<authorEmail>info@newlifeinit.com</authorEmail>
+	<authorUrl>http://www.theartofjoomla.com</authorUrl>
+	<copyright>Copyright 2011 New Life in IT Pty Ltd. All rights reserved</copyright>
+	<license>GNU General Public License &lt;http://www.fsf.org/licensing/licenses/gpl.html&gt;</license>
+	<description>COM_ARTOFGM_DESC</description>
+
+	<installfile>install/install.php</installfile>
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_artofgm.ini</language>
+	</languages>
+
+	<files folder="site">
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>media</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		
+		<file>artofgm.php</file>
+		<file>controller.php</file>
+		<file>index.html</file>
+	</files>
+
+	<administration>
+		<menu img="components/com_artofgm/media/images/artofgm_16x16.png" link="option=com_artofgm">COM_ARTOFGM</menu>
+
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_artofgm.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_artofgm.menu.ini</language>
+		</languages>
+
+		<files folder="admin">
+			<folder>helpers</folder>
+			<folder>install</folder>
+			<folder>language</folder>
+			<folder>libraries</folder>
+			<folder>media</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			
+			<file>artofgm.php</file>
+			<file>config.xml</file>
+			<file>controller.php</file>
+			<file>index.html</file>
+			<file>version.php</file>
+		</files>
+
+	</administration>
+
+	<modules>
+		<module
+			module="mod_artofgm_search"
+			title="Google Mini - Search"
+			position="left"
+			client="site"
+			showtitle="1"
+			published="0">
+			<files folder="site_mod_artofgm_search">
+				<folder>language</folder>
+				<folder>tmpl</folder>
+		
+				<filename>helper.php</filename>
+				<filename>index.html</filename>
+				<filename module="mod_artofgm_search">mod_artofgm_search.php</filename>
+				<filename>mod_artofgm_search.xml</filename>
+			</files>
+
+			<languages folder="site_mod_artofgm_search/language">
+				<language tag="en-GB">en-GB/en-GB.mod_artofgm_search.ini</language>
+			</languages>
+		</module>
+	</modules>
+</install>

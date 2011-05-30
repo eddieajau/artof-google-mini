@@ -1,0 +1,149 @@
+/**
+ * @version		$Id: default.css 445 2010-11-19 11:03:43Z eddieajau $
+ * @package		TAOJ.XUser
+ * @subpackage	com_xuser
+ * @copyright	Copyright 2010 New Life in IT Pty Ltd. All rights reserved
+ * @license		GNU Affero General Public License <http://www.fsf.org/licensing/licenses/agpl.html>
+ * @link		http://www.theartofjoomla.com
+ */
+
+/* Toolbar */
+
+.icon-48-logo {
+	background: url(../images/artofgm_48x48.png) no-repeat left;
+}
+
+/* General */
+
+div#taojfooter, div#taojfooter a {
+	text-align: center;
+	color: #777;
+}
+
+.clearfix:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+.clearfix {
+    display:inline-block;
+}
+
+.clearfix {
+    display:block;
+}
+
+* html .clearfix {
+    height:1px;
+}
+
+.scroll {
+	overflow: auto;
+}
+
+/* Validation */
+
+.readonly {
+	border: 0;
+}
+
+.invalid {
+	color: red;
+	font-weight: bold;
+}
+
+input.invalid {
+	border: 1px solid red;
+}
+
+/* Forms */
+
+fieldset {
+	margin-bottom: 10px;
+}
+fieldset legend {
+	padding: 0 2px;
+	font-weight: bold;
+}
+fieldset label {
+	line-height: 1.8;
+	vertical-align: top;
+	width: 120px; /* Width of labels */
+	/*display: inline-block;*/
+	/*display: -moz-inline-box;*/ /* Fixes Firefox */
+}
+fieldset ol {
+	margin: 0;
+	padding: 0;
+}
+fieldset li {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+fieldset span.help {
+	font-size: 85%;
+	color: #c96;
+	margin-left: 16em;
+	padding: 0 0 0 3px;
+	border-left: 1px solid #c96;
+	display: block;
+}
+
+/* Filter Blocks */
+
+fieldset.filter {
+	margin: 0;
+	border: 0;
+	padding: 0 0 5px 0;
+}
+
+fieldset.filter ol {
+	margin: 0;
+	border: 0;
+	padding: 5px 0 0 0;
+	list-style: none;
+}
+
+fieldset.filter ol li {
+	padding: 0 5px 0 0;
+	float: left;
+}
+
+fieldset.filter ol li fieldset {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+fieldset.filter .left {
+	float: left;
+}
+
+fieldset.filter .right {
+	float: right;
+}
+
+/* Joomla 1.6 ccompatibilty */
+
+span.gi {
+	color: #d7d7d7;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+/* Overrides */
+
+table.admintable td.key2 {
+    background-color: #f6f6f6;
+    text-align: right;
+    width: 240px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+}
