@@ -159,13 +159,13 @@
 
 		<!-- Special case for components. Put the XML file in the correct place -->
 		<if>
-			<available file="${targetdir}/package/${extname}/${extsub}/admin/${package}.xml" type="file" />
+			<available file="${targetdir}/package/${extname}/${extsub}/${package}.xml" type="file" />
 			<then>
 				<copy
-					file="${targetdir}/package/${extname}/${extsub}/admin/${package}.xml"
+					file="${targetdir}/package/${extname}/${extsub}/${package}.xml"
 					tofile="${targetdir}/package/${extname}/${package}.xml" overwrite="true" />
 				<delete
-					file="${targetdir}/package/${extname}/${extsub}/admin/${package}.xml" />
+					file="${targetdir}/package/${extname}/${extsub}/${package}.xml" />
 			</then>
 		</if>
 
