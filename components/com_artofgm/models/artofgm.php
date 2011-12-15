@@ -1,9 +1,9 @@
 <?php
 /**
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @copyright	Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
- * @license		GNU General Public License version 2 or later.
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @copyright   Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
+ * @license     GNU General Public License version 2 or later.
  */
 
 // No direct access
@@ -16,17 +16,17 @@ jimport('joomla.application.component.model');
  *
  * Based on JModelList.
  *
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @since		1.0
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @since       1.0
  */
 class ArtofGMModelArtofGM extends JModel
 {
 	/**
 	 * Internal memory based cache array of data.
 	 *
-	 * @var		array
-	 * @since	1.6
+	 * @var    array
+	 * @since  1.0
 	 */
 	protected $cache = array();
 
@@ -34,40 +34,41 @@ class ArtofGMModelArtofGM extends JModel
 	 * Context string for the model type.  This is used to handle uniqueness
 	 * when dealing with the getStoreId() method and caching data structures.
 	 *
-	 * @var		string
-	 * @since	1.6
+	 * @var    string
+	 * @since  1.0
 	 */
 	protected $context = null;
 
 	/**
 	 * An internal cache for the last query used.
 	 *
-	 * @var		JDatabaseQuery
-	 * @since	1.6
+	 * @var    JDatabaseQuery
+	 * @since  1.0
 	 */
 	protected $query = array();
 
 	/**
 	 * Constructor.
 	 *
-	 * @param	array	An optional associative array of configuration settings.
-	 * @see		JController
+	 * @param   array  $config  An optional associative array of configuration settings.
 	 */
 	public function __construct($config = array())
 	{
 		parent::__construct($config);
 
 		// Guess the context as Option.ModelName.
-		if (empty($this->context)) {
-			$this->context = strtolower($this->option.'.'.$this->getName());
+		if (empty($this->context))
+		{
+			$this->context = strtolower($this->option . '.' . $this->getName());
 		}
 	}
 
 	/**
 	 * Method to get an array of data items.
 	 *
-	 * @return	mixed	An array of data items on success, false on failure.
-	 * @since	1.6
+	 * @return  mixed  An array of data items on success, false on failure.
+	 *
+	 * @since   1.0
 	 */
 	public function getItems()
 	{
@@ -75,39 +76,41 @@ class ArtofGMModelArtofGM extends JModel
 		$store = $this->getStoreId();
 
 		// Try to load the data from internal storage.
-		if (!empty($this->cache[$store])) {
+		if (!empty($this->cache[$store]))
+		{
 			return $this->cache[$store];
 		}
 
-		require_once JPATH_SITE.'/components/com_artofgm/helpers/http.php';
+		require_once JPATH_SITE . '/components/com_artofgm/helpers/http.php';
 
-		$config		= JComponentHelper::getParams('com_artofgm');
-		$server		= $config->get('server');
-		$listStart	= (int) $this->getState('list.start');
-		$listLimit	= (int) $this->getState('list.limit');
+		$config = JComponentHelper::getParams('com_artofgm');
+		$server = $config->get('server');
+		$listStart = (int) $this->getState('list.start');
+		$listLimit = (int) $this->getState('list.limit');
 
-		if (empty($server)) {
+		if (empty($server))
+		{
 			throw new Exception(JText::_('COM_ARTOFGM_SERVER_NOT_SET'));
 		}
 
 		// Optional variables.
-		$q				= urlencode($this->getState('list.q'));
-		$as_q			= urlencode($this->getState('list.as_q'));
-		$as_epq			= urlencode($this->getState('list.as_epq'));
-		$as_oq			= urlencode($this->getState('list.as_oq'));
-		$as_eq			= urlencode($this->getState('list.as_eq'));
-		$as_ft			= urlencode($this->getState('list.as_ft'));
-		$as_filetype	= urlencode($this->getState('list.as_filetype'));
-		$as_occt		= urlencode($this->getState('list.as_occt'));
-		$as_dt			= urlencode($this->getState('list.as_dt'));
-		$as_sitesearch	= urlencode($this->getState('list.as_sitesearch'));
+		$q = urlencode($this->getState('list.q'));
+		$as_q = urlencode($this->getState('list.as_q'));
+		$as_epq = urlencode($this->getState('list.as_epq'));
+		$as_oq = urlencode($this->getState('list.as_oq'));
+		$as_eq = urlencode($this->getState('list.as_eq'));
+		$as_ft = urlencode($this->getState('list.as_ft'));
+		$as_filetype = urlencode($this->getState('list.as_filetype'));
+		$as_occt = urlencode($this->getState('list.as_occt'));
+		$as_dt = urlencode($this->getState('list.as_dt'));
+		$as_sitesearch = urlencode($this->getState('list.as_sitesearch'));
 
-		$sort			= urlencode($this->getState('list.sort'));
-		$filter			= urlencode($this->getState('list.filter'));
-		$lr				= urlencode($this->getState('list.lr'));
+		$sort = urlencode($this->getState('list.sort'));
+		$filter = urlencode($this->getState('list.filter'));
+		$lr = urlencode($this->getState('list.lr'));
 
 		// Check if this is an advanced search.
-		$adv	= ($as_q
+		$adv = ($as_q
 			|| $as_epq
 			|| $as_oq
 			|| $as_eq
@@ -115,38 +118,37 @@ class ArtofGMModelArtofGM extends JModel
 			|| $as_filetype
 			|| $as_occt
 //			|| ($as_dt == 'e')
-			|| $as_sitesearch
-		);
+			|| $as_sitesearch);
 
-		$url = $server.'/search?' .
-				($adv
-					? (
-						($as_q ? '&as_q='.$as_q : '')
-						.($as_epq ? '&as_epq='.$as_epq : '')
-						.($as_oq ? '&as_oq='.$as_oq : '')
-						.($as_eq ? '&as_eq='.$as_eq : '')
-						.($as_ft == 'e' || ($as_ft == 'i' && $as_filetype) ? '&as_ft='.$as_ft.'&as_filetype='.$as_filetype : '')
-						.($as_occt ? '&as_occt='.$as_occt : '')
-						.($as_sitesearch ? '&as_dt='.$as_dt.'&as_sitesearch='.$as_sitesearch : '')
-					)
-					: '&q='.$q)
-				.'&output='.$this->getState('list.output', 'xml')
-				.'&site='.$this->getState('list.site', 'default_collection')
-				.'&client='.$this->getState('list.client', 'default_frontend')
-				.'&start='.$listStart
-				.'&num='.$this->getState('list.limit')
-				.'&oe=UTF8'
-				.($sort ? '&sort='.$sort : '')
-				.($filter !== null ? '&filter='.$filter : '')
-				.($lr ? '&lr='.$lr : '')
-				;
+		$url = $server . '/search?' .
+			($adv
+				? (
+					($as_q ? '&as_q=' . $as_q : '') .
+					($as_epq ? '&as_epq=' . $as_epq : '') .
+					($as_oq ? '&as_oq=' . $as_oq : '') .
+					($as_eq ? '&as_eq=' . $as_eq : '') .
+					($as_ft == 'e' || ($as_ft == 'i' && $as_filetype) ? '&as_ft=' . $as_ft . '&as_filetype=' . $as_filetype : '') .
+					($as_occt ? '&as_occt=' . $as_occt : '') .
+					($as_sitesearch ? '&as_dt=' . $as_dt . '&as_sitesearch=' . $as_sitesearch : '')
+				)
+				: '&q=' . $q) .
+			'&output=' . $this->getState('list.output', 'xml') .
+			'&site=' . $this->getState('list.site', 'default_collection') .
+			'&client=' . $this->getState('list.client', 'default_frontend') .
+			'&start=' . $listStart .
+			'&num=' . $this->getState('list.limit') .
+			'&oe=UTF8' .
+			($sort ? '&sort=' . $sort : '') .
+			($filter !== null ? '&filter=' . $filter : '') .
+			($lr ? '&lr=' . $lr : '');
 
 		// Get the content from the server.
 		$content = ArtofGMHelperHttp::getUrl($url);
 
-		if ($this->getState('debug')) {
-			$this->setState('server.url',		$url);
-			$this->setState('server.response',	$content);
+		if ($this->getState('debug'))
+		{
+			$this->setState('server.url', $url);
+			$this->setState('server.response', $content);
 		}
 
 		// Parse the XML.
@@ -158,9 +160,9 @@ class ArtofGMModelArtofGM extends JModel
 		{
 			JError::raiseError(
 				500,
-				$e->getMessage().
-				'<br />'.$url.
-				'<br /><textarea cols="100" rows="10">'.htmlspecialchars($content).'</textarea>'
+				$e->getMessage() .
+				'<br />' . $url .
+				'<br /><textarea cols="100" rows="10">' . htmlspecialchars($content) . '</textarea>'
 			);
 		}
 
@@ -168,11 +170,11 @@ class ArtofGMModelArtofGM extends JModel
 		$this->setState('list.q', $xml->Q);
 
 		// Count the <FI/> to check if results are filtered.
-		$filtered	= $xml->xpath('//FI');
+		$filtered = $xml->xpath('//FI');
 		$this->setState('list.filtered', (boolean) count($filtered));
 
 		// Get the NU next link
-		$hasNext	= $xml->xpath('//NB/NU');
+		$hasNext = $xml->xpath('//NB/NU');
 		$this->setState('list.hasnext', (boolean) count($hasNext));
 
 		// The estimated total number of results for the search.
@@ -187,85 +189,88 @@ class ArtofGMModelArtofGM extends JModel
 		$endNum = (int) $xml->RES['EN'];
 		$this->setState('list.endnum', $endNum);
 
-		if (!$hasNext) {
+		if (!$hasNext)
+		{
 			$this->setTotal($endNum);
 		}
-		else {
+		else
+		{
 			// The appliance returns no more than 1,000 results total for a single query.
 			$this->setTotal(min(1000, $magnitude));
 		}
 
-		if ($xml->Spelling) {
+		if ($xml->Spelling)
+		{
 			$this->setState('list.spelling', (string) $xml->Spelling->Suggestion['q']);
 		}
-		else {
+		else
+		{
 			$this->setState('list.spelling', null);
 		}
 
-		$items		= array();
+		$items = array();
 
 		// Search and KeyMatch records
-		$results	= $xml->xpath('//GM');
+		$results = $xml->xpath('//GM');
 
 		foreach ($results as $result)
 		{
 			$item = new stdClass;
 
 			// Flag that this item is a KeyMatch result.
-			$item->gm			= true;
+			$item->gm = true;
 
 			// The URL of the KeyMatch result.
-			$item->gl			= (string) $result->GL;
+			$item->gl = (string) $result->GL;
 
 			// The description of the KeyMatch result.
-			$item->gd			= (string) $result->GD;
+			$item->gd = (string) $result->GD;
 
 			$items[] = $item;
 		}
 
 		// Search the results records
-		$results	= $xml->xpath('//R');
+		$results = $xml->xpath('//R');
 
 		foreach ($results as $result)
 		{
 			$item = new stdClass;
 
 			// Flag that this item is not a KeyMatch result.
-			$item->gm			= false;
+			$item->gm = false;
 
 			// The index of the search result.
-			$item->n			= (int) $result['N'];
+			$item->n = (int) $result['N'];
 
 			// The recommended indentation level of the results.
-			$item->indent		= (int) $result['L'];
+			$item->indent = (int) $result['L'];
 
 			// The index of the search result.
-			$item->mime			= (string) $result['MIME'];
+			$item->mime = (string) $result['MIME'];
 
 			// The URL of the search result.
-			$item->url			= (string) $result->U;
+			$item->url = (string) $result->U;
 
 			//The URL encoded version of the URL that is in the U parameter
-			$item->urle			= (string) $result->UE;
+			$item->urle = (string) $result->UE;
 
 			// The title of the search result.
-			$item->title		= (string) $result->T;
+			$item->title = (string) $result->T;
 
 			// Provides a general rating of the relevance of the search result.
-			$item->relevance	= (string) $result->RK;
+			$item->relevance = (string) $result->RK;
 
 			// The snippet for the search result.
-			$item->snippet		= (string) $result->S;
+			$item->snippet = (string) $result->S;
 
 			// The snippet for the search result.
-			$item->date		= (string) $result->CRAWLDATE;
+			$item->date = (string) $result->CRAWLDATE;
 
 			// The snippet for the search result.
-			$item->size		= (string) $result->HAS->C['SZ'];
+			$item->size = (string) $result->HAS->C['SZ'];
 
 			$items[] = $item;
 		}
-
 
 		// Add the items to the internal cache.
 		$this->cache[$store] = $items;
@@ -276,8 +281,9 @@ class ArtofGMModelArtofGM extends JModel
 	/**
 	 * Method to get a JPagination object for the data set.
 	 *
-	 * @return	object	A JPagination object for the data set.
-	 * @since	1.6
+	 * @return  JPagination  A JPagination object for the data set.
+	 *
+	 * @since   1.0
 	 */
 	public function getPagination()
 	{
@@ -285,7 +291,8 @@ class ArtofGMModelArtofGM extends JModel
 		$store = $this->getStoreId('getPagination');
 
 		// Try to load the data from internal storage.
-		if (!empty($this->cache[$store])) {
+		if (!empty($this->cache[$store]))
+		{
 			return $this->cache[$store];
 		}
 
@@ -303,13 +310,14 @@ class ArtofGMModelArtofGM extends JModel
 	/**
 	 * Method to get the params for this model.
 	 *
-	 * @return	JRegistry
-	 * @since	1.0
+	 * @return  JRegistry
+	 *
+	 * @since   1.0
 	 */
 	public function getParams()
 	{
 		// Initialise variables.
-		$params	= JFactory::getApplication()->getParams();
+		$params = JFactory::getApplication()->getParams();
 
 		return $params;
 	}
@@ -321,26 +329,29 @@ class ArtofGMModelArtofGM extends JModel
 	 * different modules that might need different sets of data or different
 	 * ordering requirements.
 	 *
-	 * @param	string	An identifier string to generate the store id.
-	 * @return	string	A store id.
-	 * @since	1.6
+	 * @param   string  $id  An identifier string to generate the store id.
+	 *
+	 * @return  string  A store id.
+	 *
+	 * @since   1.0
 	 */
 	protected function getStoreId($id = '')
 	{
 		// Add the list state to the store id.
-		$id	.= ':'.$this->getState('list.start');
-		$id	.= ':'.$this->getState('list.limit');
-		$id	.= ':'.$this->getState('list.ordering');
-		$id	.= ':'.$this->getState('list.direction');
+		$id .= ':' . $this->getState('list.start');
+		$id .= ':' . $this->getState('list.limit');
+		$id .= ':' . $this->getState('list.ordering');
+		$id .= ':' . $this->getState('list.direction');
 
-		return md5($this->context.':'.$id);
+		return md5($this->context . ':' . $id);
 	}
 
 	/**
 	 * Method to get the total number of items for the data set.
 	 *
-	 * @return	integer	The total number of items available in the data set.
-	 * @since	1.6
+	 * @return  integer  The total number of items available in the data set.
+	 *
+	 * @since   1.0
 	 */
 	public function getTotal()
 	{
@@ -348,7 +359,8 @@ class ArtofGMModelArtofGM extends JModel
 		$store = $this->getStoreId('getTotal');
 
 		// Try to load the data from internal storage.
-		if (!empty($this->cache[$store])) {
+		if (!empty($this->cache[$store]))
+		{
 			return $this->cache[$store];
 		}
 
@@ -364,33 +376,37 @@ class ArtofGMModelArtofGM extends JModel
 	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @param	string	An optional ordering field.
-	 * @param	string	An optional direction (asc|desc).
-	 * @since	1.6
+	 * @param   string  $ordering   An optional ordering field.
+	 * @param   string  $direction  An optional direction (asc|desc).
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
 	 */
-	protected function populateState()
+	protected function populateState($ordering = null, $direction = null)
 	{
 		// If the context is set, assume that stateful lists are used.
-		if ($this->context) {
-			$app	= JFactory::getApplication();
-			$config	= JComponentHelper::getParams('com_artofgm');
+		if ($this->context)
+		{
+			$app = JFactory::getApplication();
+			$config = JComponentHelper::getParams('com_artofgm');
 
-			$this->setState('list.q',				JRequest::getVar('q'));
-			$this->setState('list.as_q',			JRequest::getVar('as_q'));
-			$this->setState('list.as_epq',			JRequest::getVar('as_epq'));
-			$this->setState('list.as_oq',			JRequest::getVar('as_oq'));
-			$this->setState('list.as_eq',			JRequest::getVar('as_eq'));
-			$this->setState('list.as_ft',			JRequest::getWord('as_ft'));
-			$this->setState('list.as_filetype',		JRequest::getVar('as_filetype'));
-			$this->setState('list.as_occt',			JRequest::getWord('as_occt'));
-			$this->setState('list.as_lq',			JRequest::getVar('as_lq'));
-			$this->setState('list.as_dt',			JRequest::getWord('as_dt'));
-			$this->setState('list.as_sitesearch',	JRequest::getCmd('as_sitesearch'));
-			$this->setState('list.sort',			JRequest::getWord('sort'));
-			$this->setState('list.filter',			JRequest::getVar('filter', 1));
+			$this->setState('list.q', JRequest::getVar('q'));
+			$this->setState('list.as_q', JRequest::getVar('as_q'));
+			$this->setState('list.as_epq', JRequest::getVar('as_epq'));
+			$this->setState('list.as_oq', JRequest::getVar('as_oq'));
+			$this->setState('list.as_eq', JRequest::getVar('as_eq'));
+			$this->setState('list.as_ft', JRequest::getWord('as_ft'));
+			$this->setState('list.as_filetype', JRequest::getVar('as_filetype'));
+			$this->setState('list.as_occt', JRequest::getWord('as_occt'));
+			$this->setState('list.as_lq', JRequest::getVar('as_lq'));
+			$this->setState('list.as_dt', JRequest::getWord('as_dt'));
+			$this->setState('list.as_sitesearch', JRequest::getCmd('as_sitesearch'));
+			$this->setState('list.sort', JRequest::getWord('sort'));
+			$this->setState('list.filter', JRequest::getVar('filter', 1));
 
-			$this->setState('list.site',			$config->get('site'));
-			$this->setState('list.client',			$config->get('client'));
+			$this->setState('list.site', JRequest::getVar('site', $config->get('site')));
+			$this->setState('list.client', JRequest::getVar('client', $config->get('client')));
 
 			// Pagination values.
 
@@ -408,7 +424,8 @@ class ArtofGMModelArtofGM extends JModel
 //			$value = $app->getUserStateFromRequest($this->context.'.orderdirn', 'filter_order_Dir');
 //			$this->setState('list.direction', $value);
 		}
-		else {
+		else
+		{
 			$this->setState('list.start', 0);
 			$this->state->set('list.limit', 0);
 		}
@@ -417,8 +434,11 @@ class ArtofGMModelArtofGM extends JModel
 	/**
 	 * Method to set the total number of items for the data set.
 	 *
-	 * @return	integer	The total number of items available in the data set.
-	 * @since	1.6
+	 * @param   integer  $total  The total number of search records.
+	 *
+	 * @return  integer  The total number of items available in the data set.
+	 *
+	 * @since  1.0
 	 */
 	public function setTotal($total)
 	{

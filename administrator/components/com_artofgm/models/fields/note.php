@@ -1,9 +1,9 @@
 <?php
 /**
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @copyright	Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
- * @license		GNU General Public License version 2 or later.
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @copyright   Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
+ * @license     GNU General Public License version 2 or later.
  */
 
 // No direct access
@@ -14,23 +14,29 @@ jimport('joomla.form.formfield');
 /**
  * This is a JForm field that displays a help message.
  *
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @since       1.0
  */
 class JFormFieldNote extends JFormField
 {
 	/**
-	 * Element name
+	 * Element name.
+	 *
+	 * @var    string
+	 * @since  1.0
+	 * @deprecated
 	 */
 	public $_name = 'Note';
 
 	/**
 	 * Method to get the field label markup.
 	 *
-	 * @return	string	The field label markup.
-	 * @since	1.0.3
+	 * @return  string  The field label markup.
+	 *
+	 * @since   1.0
 	 */
-	function getLabel()
+	public function getLabel()
 	{
 		switch ($this->element['style'])
 		{
@@ -51,18 +57,17 @@ class JFormFieldNote extends JFormField
 				break;
 		}
 
-		return '<div class="clr"></div><div style="'.$style.'">'.
-			JText::_($this->value).
-			'</div>';
+		return '<div class="clr"></div><div style="' . $style . '">' . JText::_($this->value) . '</div>';
 	}
 
 	/**
 	 * Method to get the field input markup.
 	 *
-	 * @return	string	The field input markup.
-	 * @since	1.0.3
+	 * @return  string  The field input markup.
+	 *
+	 * @since   1.0
 	 */
-	function getInput()
+	public function getInput()
 	{
 		return null;
 	}

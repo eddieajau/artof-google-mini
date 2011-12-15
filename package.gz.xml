@@ -9,7 +9,7 @@
 	<description>Artof Google Mini package.</description>
 	<update>http://update.joomla.org/update/packages/everything</update>
 	<files>
-		<file type="component" 	id="com_artofgm" >com_artofgm.master.tar.gz</file>
-		<file type="module" 	id="mod_alpha" 	client="site">mod_artofgm_search.master.tar.gz</file>
+		<file type="component" id="com_artofgm" >com_artofgm.master.tar.gz</file>
+		<file type="module" id="mod_alpha" client="site">mod_artofgm_search.master.tar.gz</file>
 	</files>
 </extension>

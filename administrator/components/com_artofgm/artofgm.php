@@ -1,9 +1,9 @@
 <?php
 /**
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @copyright	Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
- * @license		GNU General Public License version 2 or later.
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @copyright   Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
+ * @license     GNU General Public License version 2 or later.
  */
 
 // No direct access
@@ -14,8 +14,7 @@ $lang = JFactory::getLanguage();
 $lang->load('com_artofgm', JPATH_COMPONENT);
 
 // Include dependancies.
-require_once JPATH_COMPONENT.'/version.php';
-require_once JPATH_COMPONENT.'/libraries/loader.php';
+require_once JPATH_COMPONENT . '/version.php';
 
 jimport('joomla.application.component.controller');
 

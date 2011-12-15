@@ -1,9 +1,9 @@
 <?php
 /**
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @copyright	Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
- * @license		GNU General Public License version 2 or later.
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @copyright   Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
+ * @license     GNU General Public License version 2 or later.
  */
 
 // No direct access
@@ -12,27 +12,28 @@ defined('_JEXEC') or die;
 /**
  * ArtofGM display helper.
  *
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @since		1.0
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @since       1.0
  */
 class ArtofGMHelper
 {
 	/**
 	 * Get a list of file type options
 	 *
-	 * @return	array	An array of elements suitable to use in the JHtml select list API.
-	 * @since	1.0
+	 * @return  array  An array of elements suitable to use in the JHtml select list API.
+	 *
+	 * @since   1.0
 	 */
 	public static function getFiletypeOptions()
 	{
 		$ftOptions = array(
-			JHtml::_('select.option', 'pdf',	JText::_('COM_ARTOFGM_OPTION_FORMAT_PDF')),
-			JHtml::_('select.option', 'ps',		JText::_('COM_ARTOFGM_OPTION_FORMAT_PS')),
-			JHtml::_('select.option', 'doc',	JText::_('COM_ARTOFGM_OPTION_FORMAT_DOC')),
-			JHtml::_('select.option', 'xls',	JText::_('COM_ARTOFGM_OPTION_FORMAT_XLS')),
-			JHtml::_('select.option', 'ppt',	JText::_('COM_ARTOFGM_OPTION_FORMAT_PPT')),
-			JHtml::_('select.option', 'rtf',	JText::_('COM_ARTOFGM_OPTION_FORMAT_RTF')),
+			JHtml::_('select.option', 'pdf', JText::_('COM_ARTOFGM_OPTION_FORMAT_PDF')),
+			JHtml::_('select.option', 'ps', JText::_('COM_ARTOFGM_OPTION_FORMAT_PS')),
+			JHtml::_('select.option', 'doc', JText::_('COM_ARTOFGM_OPTION_FORMAT_DOC')),
+			JHtml::_('select.option', 'xls', JText::_('COM_ARTOFGM_OPTION_FORMAT_XLS')),
+			JHtml::_('select.option', 'ppt', JText::_('COM_ARTOFGM_OPTION_FORMAT_PPT')),
+			JHtml::_('select.option', 'rtf', JText::_('COM_ARTOFGM_OPTION_FORMAT_RTF')),
 		);
 
 		return $ftOptions;
@@ -41,8 +42,9 @@ class ArtofGMHelper
 	/**
 	 * Get a list of include/exclude options
 	 *
-	 * @return	array	An array of elements suitable to use in the JHtml select list API.
-	 * @since	1.0
+	 * @return  array  An array of elements suitable to use in the JHtml select list API.
+	 *
+	 * @since   1.0
 	 */
 	public static function getInclExclOptions()
 	{
@@ -57,8 +59,9 @@ class ArtofGMHelper
 	/**
 	 * Get the list of language options.
 	 *
-	 * @return	array	An array of elements suitable to use in the JHtml select list API.
-	 * @since	1.0
+	 * @return  array  An array of elements suitable to use in the JHtml select list API.
+	 *
+	 * @since   1.0
 	 */
 	public static function getLanguageOptions()
 	{
@@ -98,14 +101,15 @@ class ArtofGMHelper
 	/**
 	 * Get a list of occurence options
 	 *
-	 * @return	array	An array of elements suitable to use in the JHtml select list API.
-	 * @since	1.0
+	 * @return  array  An array of elements suitable to use in the JHtml select list API.
+	 *
+	 * @since   1.0
 	 */
 	public static function getOccurenceOptions()
 	{
 		$occtOptions = array(
-			JHtml::_('select.option', 'title',	JText::_('COM_ARTOFGM_OPTION_OCCURENCE_TITLE')),
-			JHtml::_('select.option', 'url',	JText::_('COM_ARTOFGM_OPTION_OCCURENCE_URL')),
+			JHtml::_('select.option', 'title', JText::_('COM_ARTOFGM_OPTION_OCCURENCE_TITLE')),
+			JHtml::_('select.option', 'url', JText::_('COM_ARTOFGM_OPTION_OCCURENCE_URL')),
 		);
 
 		return $occtOptions;
@@ -114,8 +118,9 @@ class ArtofGMHelper
 	/**
 	 * Get a list of occurence options
 	 *
-	 * @return	array	An array of elements suitable to use in the JHtml select list API.
-	 * @since	1.0
+	 * @return  array  An array of elements suitable to use in the JHtml select list API.
+	 *
+	 * @since   1.0
 	 */
 	public static function getSortOptions()
 	{
@@ -129,8 +134,9 @@ class ArtofGMHelper
 	/**
 	 * Get a list of occurence options
 	 *
-	 * @return	array	An array of elements suitable to use in the JHtml select list API.
-	 * @since	1.0
+	 * @return  array  An array of elements suitable to use in the JHtml select list API.
+	 *
+	 * @since   1.0
 	 */
 	public static function getFilterOptions()
 	{

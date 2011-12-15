@@ -2,7 +2,7 @@
 <extension type="module" version="1.5.20" method="upgrade">
 	<name>MOD_ARTOFGM_SEARCH</name>
 	<author>Andrew Eddie</author>
-	<creationDate>2011-01-07</creationDate>
+	<creationDate>2011-12-15</creationDate>
 	<copyright>Copyright 2005 - 2011 New Life in IT Pty Ltd. All rights reserved.	</copyright>
 	<license>GNU General Public License version 2 or later.</license>
 	<authorEmail>support@theartofjoomla.com</authorEmail>
@@ -78,11 +78,24 @@
 				</field>
 			</fieldset>
 			
-			<fieldset group="advanced">
+			<fieldset name="advanced">
+				<field
+					name="site"
+					type="text"
+					size="50"
+					label="MOD_ARTOFGM_SEARCH_SITE_LABEL"
+					description="MOD_ARTOFGM_SEARCH_SITE_DESC" />
+					
+				<field
+					name="client"
+					type="text"
+					size="50"
+					label="MOD_ARTOFGM_SEARCH_CLIENT_LABEL"
+					description="MOD_ARTOFGM_SEARCH_CLIENT_DESC" />
+
 				<field
 					name="moduleclass_sfx"
 					type="text"
-					default=""
 					label="Module Class Suffix" 
 					description="PARAMMODULECLASSSUFFIX" />
 					

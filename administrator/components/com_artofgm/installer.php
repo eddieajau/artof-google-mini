@@ -1,18 +1,20 @@
 <?php
 /**
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
- * @copyright	Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
- * @license		GNU General Public License <http://www.fsf.org/licensing/licenses/gpl.html>
- * @link		http://www.theartofjoomla.com
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
+ * @copyright   Copyright 2011 New Life in IT Pty Ltd. All rights reserved.
+ * @license     GNU General Public License <http://www.fsf.org/licensing/licenses/gpl.html>
+ * @link        http://www.theartofjoomla.com
  */
 
 // No direct access.
 defined('_JEXEC') or die;
 
 /**
- * @package		NewLifeInIT
- * @subpackage	com_artofgm
+ * Installer class.
+ *
+ * @package     NewLifeInIT
+ * @subpackage  com_artofgm
  * @since       1.0.1
  */
 class Com_ArtofGMInstallerScript
@@ -23,9 +25,10 @@ class Com_ArtofGMInstallerScript
 	 * @param   JInstaller  $parent  The installer object.
 	 *
 	 * @return  void
+	 *
 	 * @since   1.0.1
 	 */
-	function install($parent)
+	public function install($parent)
 	{
 		// Add custom code.
 	}
@@ -36,9 +39,10 @@ class Com_ArtofGMInstallerScript
 	 * @param   JInstaller  $parent  The installer object.
 	 *
 	 * @return  void
+	 *
 	 * @since   1.0.1
 	 */
-	function uninstall($parent)
+	public function uninstall($parent)
 	{
 		// Add custom code.
 	}
@@ -49,9 +53,10 @@ class Com_ArtofGMInstallerScript
 	 * @param   JInstaller  $parent  The installer object.
 	 *
 	 * @return  void
+	 *
 	 * @since   1.0.1
 	 */
-	function update($parent)
+	public function update($parent)
 	{
 		// Add custom code.
 	}
@@ -63,9 +68,10 @@ class Com_ArtofGMInstallerScript
 	 * @param   JInstaller  $parent  The installer object.
 	 *
 	 * @return  void
+	 *
 	 * @since   1.0.1
 	 */
-	function preflight($type, $parent)
+	public function preflight($type, $parent)
 	{
 		// Add custom code.
 	}
@@ -77,17 +83,20 @@ class Com_ArtofGMInstallerScript
 	 * @param   JInstaller  $parent  The installer object.
 	 *
 	 * @return  void
+	 *
 	 * @since   1.0.1
 	 */
-	function postflight($type, $parent)
+	public function postflight($type, $parent)
 	{
 		// Note: this file is executed in the tmp folder.
-		require_once dirname(__FILE__).'/admin/version.php';
+		require_once dirname(__FILE__) . '/admin/version.php';
 
-		if ($type == 'install') {
+		if ($type == 'install')
+		{
 			echo JText::sprintf('COM_ARTOFGM_INSTALLED1', ArtofGMVersion::getVersion(false, true));
 		}
-		else {
+		else
+		{
 			echo JText::sprintf('COM_ARTOFGM_INSTALLED2', ArtofGMVersion::getVersion(false, true));
 		}
 	}

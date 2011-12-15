@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="1.6" method="upgrade">
+<extension type="component" version="1.7" method="upgrade">
 	<name>ArtofGM</name>
 	<version>1.0.1</version>
-	<creationDate>2011-01-07</creationDate>
+	<creationDate>2011-12-15</creationDate>
 	<author>Andrew Eddie</author>
 	<authorEmail>info@newlifeinit.com</authorEmail>
 	<authorUrl>http://www.theartofjoomla.com</authorUrl>
@@ -30,7 +30,6 @@
 		<files folder="admin">
 			<folder>helpers</folder>
 			<folder>language</folder>
-			<folder>libraries</folder>
 			<folder>media</folder>
 			<folder>models</folder>
 			<folder>views</folder>

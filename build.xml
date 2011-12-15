@@ -16,11 +16,11 @@
 
 	<!--
 	Usage:
-	1. Build off the trunk
-	# phing -Dscmusr=username -Dscmpwd=password
-
-	3. Build and rename files with version
-	# phing -Dversion=1.0.1
+	1. Standard build
+	$ phing
+	
+	2. Build and rename files with version
+	$ phing -Dpackage.version=1.0.1
 	-->
 
 	<!-- MAIN -->
@@ -28,8 +28,9 @@
 
 		<!-- Cleanup build area -->
 		<delete dir="${targetdir}/package" />
+		<mkdir dir="${targetdir}/package" />
 
-		<!-- Admin component -->
+		<!-- Add the admin component -->
 		<phingcall target="build">
 			<property name="extpath" value="administrator/components/com_artofgm" />
 			<property name="extname" value="com_artofgm" />
@@ -62,7 +63,11 @@
 		</if>
 
 		<delete file="${targetdir}/${package}.${package.version}.tar.gz" />
-		
+		<copy
+			file="${targetdir}/package.gz.xml"
+			tofile="${targetdir}/package/package.xml" overwrite="true" />
+		<!-- TODO replace version number in file. -->
+
 		<tar
 			destfile="${targetdir}/${package}.${package.version}.tar.gz"
 			basedir="${targetdir}/package"
@@ -71,12 +76,16 @@
 			<fileset dir="${targetdir}/package">
 				<include name="*gz" />
 			</fileset>
-			<fileset dir="${targetdir}/..">
+			<fileset dir="${targetdir}/package">
 				<include name="package.xml" />
 			</fileset>
 		</tar>
 
 		<delete file="${targetdir}/${package}.${package.version}.zip" />
+		<copy
+			file="${targetdir}/package.zip.xml"
+			tofile="${targetdir}/package/package.xml" overwrite="true" />
+		<!-- TODO replace version number in file. -->
 
 		<zip
 			destfile="${targetdir}/${package}.${package.version}.zip"
@@ -84,7 +93,7 @@
 			<fileset dir="${targetdir}/package">
 				<include name="*zip" />
 			</fileset>
-			<fileset dir="${targetdir}/..">
+			<fileset dir="${targetdir}/package">
 				<include name="package.xml" />
 			</fileset>
 		</zip>
@@ -94,6 +103,7 @@
 	</target>
 
 	<target name="build" description="Packages the extension for delivery">
+		<!-- Switch to tell this task to make the zip files. Default is on. -->
 		<if>
 			<not>
 				<isset property="build" />
@@ -103,6 +113,7 @@
 			</then>
 		</if>
 
+		<!-- Option to include the version number in the final file names. --> 
 		<if>
 			<not>
 				<isset property="package.version" />
@@ -112,6 +123,7 @@
 			</then>
 		</if>
 
+		<!-- The following options are for picking up the right files/folders. -->
 		<if>
 			<not>
 				<isset property="extname" />
@@ -151,7 +163,7 @@
 
 		<!-- Copy the source files to the target folder -->
 		<copy todir="${targetdir}/package/${extname}/${extsub}${extfile}">
-			<fileset dir="../${extpath}">
+			<fileset dir="${extpath}">
 				<include name="**" />
 				<exclude name=".*" />
 			</fileset>
